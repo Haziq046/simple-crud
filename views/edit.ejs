@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <form action="/edit/<%=todo.title%>" method="post">
+      <label for="title">Title:</label><br />
+      <input
+        type="text"
+        id="title"
+        name="title"
+        value="<%=todo.title%>"
+      /><br />
+      <label for="date">Date:</label><br />
+      <input type="text" id="date" name="date" value="<%=todo.date%>" /><br />
+      <label for="status">Status:</label><br />
+      <input
+        type="text"
+        id="status"
+        name="status"
+        value="<%=todo.status%>"
+      /><br />
+      <br />
+      <input type="submit" value="Update" />
+    </form>
+  </head>
+  <body></body>
+</html>

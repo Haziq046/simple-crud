@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <style>
+      table, th, td {
+        border:1px solid black;
+        border-collapse: collapse;
+      }
+      </style>
+  </head>
+  <body>
+    
+    <h1>Todos List</h1>
+    <a href="/add"><button style="margin: 10px;">Add a New Todo</button></a>    
+    <table style="width:100%">
+      <tr>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Status</th>
+      </tr>
+    
+    <% for (var i =0; i <todos.length;  i++ ) { %> 
+      <tr>
+        <td><%=todos[i].title%></td>
+        <td><%=todos[i].date%></td>
+        <td><%=todos[i].status%></td>
+        <td><a href="/edit/<%=todos[i].title%>"><button id="edit">Edit</button></a></td>
+        <td><a href="/delete/<%=todos[i].title%>"><button id="delete">Delete</button></a></td>
+      </tr>
+    <% } %>
+    </table>
+
+
+
+    <!-- <script>
+      window.onload = function () {
+      var deleteBtn = document.getElementById("delete");
+      deleteBtn.onclick = handleDelete;
+      };
+
+      function handleDelete(e){
+    var tag = e.target;
+    var todo = tag.parentNode;
+    li.parentNode.removeChild(li);
+}
+
+    </script> -->
+  </body>
+</html>
